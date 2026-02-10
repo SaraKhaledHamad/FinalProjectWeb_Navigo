@@ -1,0 +1,88 @@
+
+ /* هاد كود لتنسيق صفحة الروابط  */
+
+body{
+    background: linear-gradient(to right, #667eea, #764ba2);
+    font-family:Arial;
+    padding:40px;
+}
+
+.box{ /*يلي فيه الروابط div  تنسيق ل */
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.link{ /* تنسبق كاردالرابط نفسه*/
+    background:#eee;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.link:hover{
+    background:#ddd;
+}
+
+.link a{ /* تنسيق الرابط*/
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
+
+.back{/* تنسبق زر العودة لصفحة الرود ماب*/
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    color:white;
+    background:#667eea;
+    padding:10px;
+    border-radius:6px;
+    text-decoration:none;
+}
+p{
+    text-align:center;
+}
+
+.simple-footer {
+    color: #555;
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* خط تحت الرابط عند التأشير */
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+

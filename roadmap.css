@@ -1,0 +1,353 @@
+ /* هاد كود لتنسيق صفحة الرود ماب */
+
+body { 
+    margin: 0;  
+    font-family: 'Poppins', sans-serif;  
+    background: linear-gradient(to right, #667eea, #764ba2);  
+    min-height: 100vh; 
+    padding: 20px 10px; 
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+
+        }
+
+.container { /* تنسيق الحاوية يلي فيها بيطبع المجال و النسبة والمستوى*/
+     background: white; 
+     width: 100%; 
+     max-width: 95%; 
+     padding: 30px;
+     max-width: 850px; 
+     border-radius: 20px; 
+     box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+     margin: 0 auto 40px auto; 
+    }
+
+h2 { 
+    text-align: center;
+     color: #333; 
+     margin-top: 0; 
+     text-transform: none; 
+    }
+
+ .stats-container {  /*.stat-item تنسيق لل */ 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px;
+     margin-bottom: 25px;
+      flex-wrap: wrap; 
+    }
+
+.stat-item { /* هي كل وحدة بتعرض المستوى او المجال والنسبة*/ 
+    background: #f8f9fa; 
+    padding: 10px 20px; 
+    border-radius: 50px; 
+    font-size: 0.9rem; 
+    border: 1px solid #eee; 
+}
+ svg { 
+    width: 100%;
+    height: auto; 
+    display: block;
+ }
+
+.btn-container { /* تنسيق حاوية الزر*/
+    text-align: center;
+     margin-top: 20px; 
+    }
+
+.btn-another { /* تنسيق الزر يلي رح يرجع لصفحة الامتحان مرة تانية*/
+     display: inline-block; 
+     padding: 15px 40px; 
+     background: #28a745; 
+     color: white; 
+     text-decoration: none;
+      border-radius: 50px; 
+      font-weight: bold; 
+      text-transform: none;
+     }
+h1{
+    text-align:center; 
+    color:white; 
+    margin-bottom:40px;
+}
+h2{
+    color: #555;
+}
+#Nostepsfound{ /* تنسيق جملة الطباعة انه فش دروس لهاد لبمستوى*/
+    text-align:center; 
+    color: #888;
+}
+#completeanexam{ /* تنسيق جملة الطباعة انه لسة ما قدم امتحان */
+    color: #777; 
+    margin-bottom: 20px;
+}
+
+/*  للفوتر */
+.simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها*/
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+
+
+/*هان رح تتغيراحجام كل شس  بناء على حجم الشاشة الي في الميديا كويري*/
+
+@media (max-width: 480px) {
+    .container {
+
+ 
+        width: 90% !important;  
+        padding: 20px !important;
+        margin: 10px auto !important; 
+        box-sizing: border-box !important;
+    }
+
+    .btn-container {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .btn-another {
+        width: 80% !important; /* الزر يعرض بشكل مناسب للجوال */
+        padding: 12px !important;
+        margin: 10px auto !important;
+        display: block !important;
+    }
+
+    /* خيارات إضافية للنصوص */
+    h1, h2, #Nostepsfound, #completeanexam {
+        width: 100% !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    stats-container {
+        flex-direction: column;      
+        gap: 10px;
+        align-items: center;
+    }
+
+    .stat-item {
+        width: 90%;                  /* يحافظ على عرض مناسب للهواتف */
+        text-align: center;
+    }
+     svg { 
+    width: 100% !important;
+
+    align-items: center !important;
+    margin: auto !important;
+    display: block !important;
+   
+ }
+  .simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+
+}
+
+
+
+/* هان عشان لما يكون الجهاز الايباد بالطول*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .container {
+        width: 85%;
+        padding: 25px;
+        margin: auto;
+        
+    }
+    .btn-another {
+        width: 60%;
+        padding: 14px 25px;
+        margin: 10px auto;
+        display: block;
+    }
+    .simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* خط تحت الرابط عند التأشير */
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
+
+/* هان عشان لما يكون الجهاز  الايباد بالعرض*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        width: 80%;
+        padding: 25px;
+        margin: auto;
+    }
+    .btn-another {
+        width: 50%;
+        padding: 14px 25px;
+        margin: 10px auto;
+        display: block;
+    }
+  .simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* خط تحت الرابط عند التأشير */
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
+
+
+/* الأجهزة الصغيرة بالعرض */
+@media (max-width: 800px) and (min-width: 481px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+    .btn-another {
+        width: 70%;
+        padding: 12px;
+        margin: 10px auto;
+        display: block;
+    }
+   .simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* خط تحت الرابط عند التأشير */
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
+
+
+
+

@@ -1,0 +1,296 @@
+/* هاد كود لتنسيق اللوجين و انشاء حساب جديد */
+
+body {
+    margin: 0;/* هاد عشان الموقع يلتصق بحواف الشاشة*/
+    font-family: 'Poppins', sans-serif;/* نوع الخط*/
+    background: linear-gradient(to right, #667eea, #764ba2); /* هاد لون الخلفية */
+
+    min-height: 100vh; /*الخلفية رح تغطي كل الشاشة بالطول */
+
+    justify-content: center;/*هاد بتخلي العناصر في النص بالعرض*/
+    align-items: center;/*هاد بتخلي العناصر في النص بالطول*/
+    padding: 20px;
+    box-sizing: border-box;/*هان بطبق البادينق و الويدث من غير ما يجمعهم مع بعض و يخليهم بالويدث*/
+
+
+}
+#HomePage, #loginPage {
+    background: white;
+    width: 100%;/*هاد يعني خلي الويدث ياخد العرض كامل بس بالشروط الي تحت*/
+    min-width: 500px; /*هاد عشان م يخليه يصغر اكثر من 500 بكسل*/     
+    max-width: 500px; /*هاد عشان م يخليه يتمدد اكثر من 500 بكسل*/  
+    /*خليت الاثنين نقس الويدث عشان يضل ثايت بالشاشات الكبيرة*/
+    padding: 30px 25px;/*هان بسيب فراغ فوق و تحته بقيمة 30 و من اليمين و اليسار بقيمة 25*/
+    border-radius: 20px;/*هاد للزوايا*/
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);/*هان عشان اعمل ظل اول رقم الي هو الصفر بحدد الظل يمين و يساد و ثاني رقم الي هو 15 بحدد الظل فوق و تحت و ثالث رقم الي هو 35 بحدد بعد الظل عن الصندوق و بالاخر لون الظل*/
+    text-align: center;/*هاد بتخلي النصوص قي المنتصف*/
+    box-sizing: border-box;/*هان بطبق البادينق و الويدث من غير ما يجمعهم مع بعض و يخليهم بالويدث*/
+    margin: 20px auto;/*20 عشان اعمل مسافة من فوق و تحت و اوتو عشان يضل بالنص من حيث اليمين و اليسار*/
+
+}
+
+
+#newaccount, #logaccount {
+    color: #333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* نوع الخط*/
+    font-size: 1.2rem;/*حجم الخط*/
+    font-weight: 600;/*سمك الخط*/
+    margin-bottom: 10px;/*مسافة من تحت بس*/
+}
+
+#information {
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;/* نوع الخط*/
+    font-size: 0.8rem;/*حجم الخط*/
+    margin-bottom: 20px;/*مسافة من تحت بس*/
+}
+
+input[type="text"], input[type="password"] {/*هان رح يطبق التنسيق بس على حقول الادخال الي من نوع النص و الباسوورد*/
+    width: 75%;/*هان رح ياخد مساحة 75  */
+    padding: 10px 15px ;/*هان رح يبتعد من الاعلى و الاسفل 10  بكسل و من اليمين و اليسار 15*/
+    margin: 8px 1px 8px 1px;
+    border: 1px solid #ccc;/*هان الحدود */
+    border-radius: 10px;/*زاوية الحدود عشان م تضل قائمة*/
+    font-size: 0.95rem;/*حجم النص*/
+}
+
+#sub {/*هاد تنسيقات زؤ السبمينت*/
+    width: 100%;/*هاد يعني خلي الويدث ياخد العرض كامل بس بالشروط الي تحت*/
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;/*لون النص*/
+    border: none;/*هان صار ازالة للحدود */
+    padding: 12px 0;
+    border-radius: 25px;/*زاوية الحدود عشان م تضل قائمة*/
+    font-size: 1rem;/*حجم النص*/
+    font-weight: 600;/*سمك الخط*/
+    cursor: pointer;/*هان شكل الماوس بصير على شكل يد*/
+    transition: 0.3s;/*هان اذا اذا صار اي نوع من انواع التأثيرات يكون بشكل انسيابي مش فجاة*/
+}
+#sub:hover {
+    transform: scale(1.05);/*هان رح يكبر الزر */
+    filter: brightness(1.1);/*هان رح يتحكم قي سطوع اللون*/
+}
+
+#login, #login_log {
+    display: inline-block;
+    margin-top: 15px;
+    background: linear-gradient(to right,#667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s;/*هان اذا اذا صار اي نوع من انواع التأثيرات يكون بشكل انسيابي مش فجاة*/
+}
+#login:hover, #login_log:hover {
+    transform: scale(1.05);/*هان رح يكبر الزر */
+    filter: brightness(1.1);/*هان رح يتحكم قي سطوع اللون*/
+}
+
+#account {
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 15px;
+}
+
+/*هان رح تتغيراحجام كل شس  بناء على حجم الشاشة الي في الميديا كويري*/
+@media (max-width: 480px) {
+    #HomePage, #loginPage {
+        width: 90% !important;        
+        min-width: 280px !important;  
+        padding: 20px 15px !important; 
+        margin: auto;                 /*   عشان يضل بالنص */
+    }
+
+    /* عشان الحقول جواتهم ما تطلع لبرة */
+    #HomePage input, #loginPage input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+.simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها  */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+
+
+
+/* هان عشان لما يكون الجهاز الايباد بالطول*/
+
+ @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    #HomePage, #loginPage {
+        width: 90% !important;        
+        min-width: 280px !important;  
+        padding: 20px 15px !important; 
+        margin: auto;                 /*   عشان يضل بالنص */
+    }
+
+    /* عشان الحقول جواتهم ما تطلع لبرة */
+    #HomePage input, #loginPage input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .simple-footer {
+    color: #555;  
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها  */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* خط تحت الرابط عند التأشير */
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
+/* هان عشان لما يكون الجهاز  الايباد بالعرض*/
+ @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #HomePage, #loginPage {
+        width: 90% !important;        /* بيخلي العرض مناسب للجوال */
+        min-width: 280px !important;  
+        padding: 20px 15px !important; 
+        margin: auto;                 /*   عشان يضل بالنص */
+    }
+
+    /* عشان الحقول جواتهم ما تطلع لبرة */
+    #HomePage input, #loginPage input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .simple-footer {
+    color: #555;  
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها  */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;  
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
+
+
+
+/* الأجهزة الصغيرة بالعرض  */
+@media (max-width: 800px) and (min-width: 481px) {
+    #HomePage, #loginPage {
+        width: 90% !important;        
+        min-width: 280px !important;  
+        padding: 20px 15px !important; 
+        margin: auto;                 /*   عشان يضل بالنص */
+    }
+
+    /* عشان الحقول جواتهم ما تطلع لبرة */
+    #HomePage input, #loginPage input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .simple-footer {
+    color: #555;  
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff;  
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* خط تحت الرابط عند التأشير */
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
+
+
+

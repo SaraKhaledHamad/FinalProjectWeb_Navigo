@@ -1,0 +1,315 @@
+/* هاد كود لتنسيق صفحة الاختبار */
+#body{
+
+   background: linear-gradient(to right, #667eea, #764ba2);/* هاد لون الخلفية */
+    box-sizing: border-box;/*هان بطبق البادينق و الويدث من غير ما يجمعهم مع بعض و يخليهم بالويدث*/
+}
+.question{  /*تصميم للاسئلة*/
+
+  border:1px outset #444444;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-top: 5px;
+
+}
+
+#heading,h3{ /*تصميم لاسم الصفحة ولكل عنوان مجال للاسئلة*/
+text-align: center;
+color: #ffeb3b;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:x-large;
+}
+#choice_statment{ /*تصميم للسؤال يلي بيحكي اختار احد المجالات*/
+margin-left:5px;
+color:#444444;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:large; 
+font-weight: bold;
+}
+.specific_sub{ /*تصميم للزر يلي رح يرسل الامتحان*/ 
+background: linear-gradient(to right, #2ecc71, #27ae60);
+   color:white;    
+  border: none;              
+  padding: 5px 5px;        
+  border-radius: 5px;        
+  cursor: pointer;/*هان شكل الماوس بصير على شكل يد*/
+  margin-left: 520px; 
+}
+.specific_sub:hover { /*هان رح يعمل حركة للزر*/
+    transform: scale(1.05); /*هان رح يكبر الزر */
+    filter: brightness(1.1);/*هان رح يتحكم قي سطوع اللون*/
+}
+/* التنسيقات للفوتر*/
+.simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها*/
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+
+/*هان رح تتغيراحجام كل شس  بناء على حجم الشاشة الي في الميديا كويري*/
+
+@media (max-width: 480px) {
+    .question, #heading,h3,#choice_statment {
+        width: 80% !important;        /* بيخلي العرض مناسب للجوال */
+        min-width: 280px !important;  
+        padding: 20px 15px !important; 
+        margin: auto;                 /*   عشان يضل بالنص */
+    }
+
+    /* عشان الحقول جواتهم ما تطلع لبرة */
+    .question, #heading,h3,#choice_statment,p  {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .specific_sub{
+         box-sizing: border-box !important; 
+        margin: 20px auto 0 auto;
+        width: 50% !important;        
+        min-width: 100px !important;  
+        padding: 10px 10px !important;
+        display: block; 
+        cursor: pointer;
+        border-radius: 5px;         
+
+    }
+    .simple-footer {
+    color: #555;
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* خط تحت الرابط عند التأشير */
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+  }
+
+
+
+/* هان عشان لما يكون الجهاز الايباد بالطول*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .question, #heading,h3,#choice_statment {
+        width: 80% !important;        /* بيخلي العرض مناسب  */
+        min-width: 280px !important;  
+        padding: 20px 15px !important; 
+        margin: auto;                 /*   عشان يضل بالنص */
+    }
+
+    /* عشان الحقول جواتهم ما تطلع لبرة */
+    .question, #heading,h3,#choice_statment,p  {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .specific_sub{
+         box-sizing: border-box !important; 
+        margin: 20px auto 0 auto;
+        width: 50% !important;        
+        min-width: 100px !important;  
+        padding: 10px 10px !important;
+        display: block; 
+        cursor: pointer;
+        border-radius: 5px;         
+
+    }
+    .simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
+
+/* هان عشان لما يكون الجهاز  الايباد بالعرض*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .question, #heading,h3,#choice_statment {
+        width: 80% !important;        /* بيخلي العرض مناسب للجوال */
+        min-width: 280px !important;  
+        padding: 20px 15px !important; 
+        margin: auto;                 /*   عشان يضل بالنص */
+    }
+
+    /* عشان الحقول جواتهم ما تطلع لبرة */
+    .question, #heading,h3,#choice_statment,p  {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .specific_sub{
+         box-sizing: border-box !important; 
+        margin: 20px auto 0 auto;
+        width: 50% !important;        
+        min-width: 100px !important;  
+        padding: 10px 10px !important;
+        display: block; 
+        cursor: pointer;
+        border-radius: 5px;         
+
+    }
+    .simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
+
+
+
+/* الأجهزة الصغيرة بالعرض  */
+@media (max-width: 800px) and (min-width: 481px) {
+    .question, #heading,h3,#choice_statment {
+        width: 80% !important;        /* بيخلي العرض مناسب للجوال */
+        min-width: 280px !important;  
+        padding: 20px 15px !important; 
+        margin: auto;                 /*   عشان يضل بالنص */
+    }
+
+    /* عشان الحقول جواتهم ما تطلع لبرة */
+    .question, #heading,h3,#choice_statment,p  {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .specific_sub{
+         box-sizing: border-box !important; 
+        margin: 20px auto 0 auto;
+        width: 50% !important;        
+        min-width: 100px !important;  
+        padding: 10px 10px !important;
+        display: block; 
+        cursor: pointer;
+        border-radius: 5px;         
+
+    }
+    .simple-footer {
+    color: #555; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر فوق بعضها */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #007bff; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
+.simple-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+#foot_statment{
+color:rgb(139, 0, 60);
+}
+}
